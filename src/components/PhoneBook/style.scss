@@ -1,0 +1,78 @@
+@import '../../assets/breakpoints.scss';
+
+.wrapper {
+    margin: 15px 20px;
+    padding: 20px 50px 5px 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    width: 40%;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    @include breakpoints(sm) {
+        width: 60%;
+    }
+    .row {
+        margin: 25px 0;
+        .col-25 {
+            float: left;
+            width: 30%;
+            padding-left: 10px;
+            margin-top: 4px;
+            @include breakpoints(sm) {
+                float: none;
+                width: 100%;
+                padding-left: 3px;
+                padding-bottom: 8px;
+            }
+            .label {
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+        .col-75 {
+            float: left;
+            width: 60%;
+            @include breakpoints(sm) {
+                width: 95%;
+            }
+            .input {
+                border: 1.5px solid rgb(214, 214, 214);
+                border-radius: 6px;
+                width: 100%;
+                padding: 5px;
+                padding-left: 12px;
+                font-family: inherit;
+                font-size: 16px;
+                &:focus-visible {
+                    outline-color: #9ba5d8;
+                }
+                // remove input auto fill background for chrome
+                &:-internal-autofill-selected{
+                    -webkit-box-shadow: 0 0 0 30px white inset !important;
+                    box-shadow: 0 0 0 30px white inset !important;
+                    
+                }
+            }
+        }
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+    .button {
+        text-align: center;
+        padding-top: 15px;
+        .submit {
+            border: none;
+            border-radius: 6px;
+            padding: 6px 20px;
+            background-color: #5469d4; 
+            color: white;
+            font-family: inherit;;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+    }
+}

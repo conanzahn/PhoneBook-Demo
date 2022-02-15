@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import './assets/breakpoints.scss';
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title {
+    margin-top: 50px;
+    color: #5469d4;
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 900;
+  }
+  .line {
+    margin: 40px;
+    border-top: 1px solid rgb(218, 217, 217);
+    width: 95%;
+  }
+  .footer {
+    margin-bottom: 30px;
+    color: #2a44c5;
+    font-size: 14px;
+    .links {
+      .item {
+        padding: 0 35px;
+        @include breakpoints(sm) {
+          display: block;
+          text-align: center;
+          padding: 4px 0;
+        }
+        a, .icon {
+          vertical-align: middle;
+        }
+        a {
+          text-decoration: none;
+          color: #2a44c5;
+          padding-left: 6px;
+        }
+      }
+    }
+    .copyright {
+      margin-top: 15px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-align: center;
+      @include breakpoints(sm) {
+        margin: 10px 20px 0 20px;
+      }
+    }
+  }
+}
+
